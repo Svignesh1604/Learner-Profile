@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <style>
+        /* index.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    margin: 20px;
+}
+
+.sidebar {
+    width: 250px;
+    padding: 20px;
+    margin-right: 20px; /* space between sidebar and main content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* shadow effect */
+    border-radius: 8px; /* rounded corners */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color:blue;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #2c5d7f;
+    color: white;
+}
+
+.profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* shadow effect */
+    border-radius: 8px; /* rounded corners */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group button {
+    /* width: 100%; */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.form-group button {
+    background-color:blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #1a3d5c;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .sidebar {
+        padding: 10px;
+    }
+
+    .sidebar ul li a {
+        padding: 8px;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+
+    .form-group input,
+    .form-group button,
+    textarea {
+        padding: 8px;
+    }
+
+    .form-group button {
+        font-size: 14px;
+    }
+
+    .profile-image {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <div style="background-color:#2c5d7f;">
+        <h1 style="display: inline-block;margin-top: 2px;">E-Learning</h1>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <div class="profile-header">
+                <img src="https://static9.depositphotos.com/1637787/1199/i/450/depositphotos_11996448-stock-photo-happy-businessman-with-laptop-smiling.jpg" alt="Profile Image" class="profile-image" id="profile-image">
+
+            </div>
+            <ul>
+                <li><a href="index.html">Profile</a></li>
+                <li><a href="Courses.html">My Courses</a></li>
+                <li><a href="Feedback.html">Feedback</a></li>
+                <li><a href="Change-Password.html">Change Password</a></li>
+                <li><a href="Logout.html">Logout</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <h1 style="text-align: center;font-size: 40px;color: #2c5d7f;">Feedback</h1>
+
+            <form id="feedback-form">
+                <div class="form-group">
+                    <label for="student-id">Student ID</label>
+                    <input type="text" id="student-id" name="student_id" value="173" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="feedback">Write Feedback:</label>
+                    <textarea id="feedback" name="feedback"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

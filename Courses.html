@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Courses</title>
+    <style>
+        /* index.css */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: flex;
+            margin: 20px;
+        }
+
+        .sidebar {
+            width: 250px;
+            padding: 20px;
+            margin-right: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color:blue;
+            display: block;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #2c5d7f;
+            color: white;
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-image {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .course-card {
+            margin: 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .course-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .course-info p {
+            margin: 10px 0;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: red;
+        }
+
+        .watch-course {
+            background-color:blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .watch-course:hover {
+            background-color: #1a3d5c;
+        }
+
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .sidebar {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .main-content {
+                width: 100%;
+            }
+        }
+
+       
+        @media (max-width: 480px) {
+            .sidebar {
+                padding: 10px;
+            }
+
+            .sidebar ul li a {
+                padding: 8px;
+            }
+
+            .main-content {
+                padding: 10px;
+            }
+
+            .form-group input,
+            .form-group button,
+            textarea {
+                padding: 8px;
+            }
+
+            .form-group button {
+                font-size: 14px;
+            }
+
+            .profile-image {
+                width: 80px;
+                height: 80px;
+            }
+
+            .course-card {
+                padding: 15px;
+            }
+
+            .watch-course {
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div style="background-color:#2c5d7f; padding: 10px;">
+        <h1 style="display: inline-block; margin: 0; color: white;">E-Learning</h1>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <div class="profile-header">
+                <img src="https://static9.depositphotos.com/1637787/1199/i/450/depositphotos_11996448-stock-photo-happy-businessman-with-laptop-smiling.jpg" alt="Profile Image" class="profile-image" id="profile-image">
+
+            </div>
+            <ul>
+                <li><a href="index.html">Profile</a></li>
+                <li><a href="Courses.html">My Courses</a></li>
+                <li><a href="Feedback.html">Feedback</a></li>
+                <li><a href="Change-Password.html">Change Password</a></li>
+                <li><a href="Logout.html">Logout</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <h2 style="text-align: center;font-size: 40px;color: #2c5d7f;">All Courses</h2>
+            <h3>Learn Python A-Z</h3>
+            <div class="course-card">
+                
+                <img src="course-image.jpg" alt="Course Image">
+                <div class="course-info">
+                    <p>This is the most comprehensive, yet straight-forward, course
+                        <br>
+                        for the Python programming language.
+                    </p>
+                    <p>Duration: 4 Months</p>
+                    <p>Instructor: Rahul Kumar</p>
+                    <p>Price: <span class="original-price">₹1000</span> ₹800</p>
+                    <button class="watch-course">Watch Course</button>
+                </div>
+            </div>
+            <h3>Learn Python A-Z</h3>
+            <div class="course-card">
+                
+                <img src="course-image.jpg" alt="Course Image">
+                <div class="course-info">
+                    <p>This is the most comprehensive, yet straight-forward, course
+                        <br>
+                        for the Python programming language.
+                    </p>
+                    <p>Duration: 4 Months</p>
+                    <p>Instructor: Rahul Kumar</p>
+                    <p>Price: <span class="original-price">₹1000</span> ₹800</p>
+                    <button class="watch-course">Watch Course</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
